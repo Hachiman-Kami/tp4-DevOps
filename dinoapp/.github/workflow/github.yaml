@@ -1,0 +1,27 @@
+name: workflow all branches
+
+on:
+  build:
+    branches:
+      - main
+
+
+
+
+# Define jobs for the workflow
+jobs:
+# Job: Build
+  build:
+    runs-on: ubuntu-latest
+# Steps for the build job
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
