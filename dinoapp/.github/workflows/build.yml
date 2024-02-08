@@ -6,9 +6,6 @@ on:
       - '*'
       - '*/*'
 
-
-
-
 # Define jobs for the workflow
 jobs:
 # Job: Build
