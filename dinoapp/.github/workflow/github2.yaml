@@ -3,7 +3,7 @@ name: workflow gitub pages
 on:
   deploy:
     branches:
-      - gh-pages
+      - main
 
 
 deploy:
@@ -17,5 +17,9 @@ deploy:
     - name: deploy
       uses: actions/deploy-pages@v3
     - name: Deploy to  gh-pages
-      run: npm install gh-pages --save-dev
+      run: npm i
+    - name: Deploy to  gh-pages
+      run: npm run deploy -- -m "Deploy React app to GitHub Pages"
+
+
 
