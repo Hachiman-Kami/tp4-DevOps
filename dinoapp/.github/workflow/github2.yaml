@@ -11,6 +11,11 @@ deploy:
     # Steps for the deploy job
   steps:
     - name: Checkout code
-      uses: actions/checkout@v2
-    - name: Deploy to production
-      run: echo "Deploying to production..."
+      uses: actions/checkout@v4
+    - name: upload
+      uses: actions/upload-pages-artifact@v2
+    - name: deploy
+      uses: actions/deploy-pages@v3
+    - name: Deploy to  gh-pages
+      run: npm install gh-pages --save-dev
+
