@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - '*'
-      - '*/*'
+      
 
 # Define jobs for the workflow
 jobs:
